@@ -1,0 +1,60 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="alurat-om">
+
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        color: #ffffff;
+        background-color: #000111;
+        width: 100wv;
+        height: 100vh;
+        display: block;
+      }
+      
+      .body {
+        @apply(--layout-vertical);
+
+        padding: 0 3rem;
+        width: 100%;
+        height: 100%;
+      }
+
+      .heading-body {
+        color: #ffffff;
+        background-color: #000100;
+        height: 2rem;
+        margin: 0;
+      }
+      
+      .content-body {
+        @apply(--layout-horizontal);
+        @apply(--layout-flex);
+        @apply(--layout-center);
+      }
+
+      .content-body paper-input {
+        --paper-input-container-input-color: #ffffff;
+        --paper-input-container-input-focus: #ff00ff;
+        --paper-input-container-color: #ffffff;
+      }
+
+    </style>
+    
+    <div class="body">
+      <div class="heading-body">
+        <h5>Laboratory App</h5>
+      </div>
+      
+      <div class="content-body">
+        <paper-input value="{{value::change}}"></paper-input>
+      </div>
+    </div>
+    
+
+  </template>
+
+  <!-- Creates the element's prototype and registers it -->
+  <script src="alurat-om.js"></script>  
+</dom-module>
